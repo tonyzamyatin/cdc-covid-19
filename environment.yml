@@ -178,4 +178,3 @@ dependencies:
   - zstd=1.5.6=h8880b57_0
   - pip:
       - pmdarima  # Ensure installation via pip as a fallback
-prefix: C:\Users\Anton\miniconda3\envs\cdc-covid-19_env
