@@ -1,4 +1,4 @@
-name: tu_mdg
+name: cdc-covid-19_env
 channels:
   - defaults
 dependencies:
