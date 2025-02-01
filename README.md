@@ -20,7 +20,7 @@ It contains **17.5k records**, covering weekly mortality data for **COVID-19, Pn
 ### **1. Create and Activate the Conda Environment**
 ```bash
 conda env create -f environment.yml
-conda activate tu_mdg
+conda activate cdc-covid-19_env
 ```
 
 ### **2. Run the Streamlit App**
