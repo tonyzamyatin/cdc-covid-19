@@ -1,22 +1,83 @@
-## Setup
-1. Create environment and install packages: `conda env create -f environment.yml`
-2. Activate environment: `conda activate tu_mdg`
-3. Open project in PyCharm IDE (download from [JetBrains Toolbox](https://www.jetbrains.com/de-de/toolbox-app/))
-4. Open a Juypter notebook (`*.ipynb` file extension))
-5. Execute any code cell and PyCharm should take care of starting the Jupyter server in the background
+# Interactive Visual Analytics for Disease Mortality
 
-## Juypter Notebook in PyCharm (all you need to know)
-- Always execute the first cell with all the imports first
-- It is not possible to run multiple notebooks simultaneously. If you execute a code cell from another notebook, the automatically managed Jupyter server will likely crash. To execute a different notebook:
-    1. Navigate to the Jupyter server tab in PyCharm (bottom left corner in the side bar)
-    2. First Stop the Jupyter server (press the red stop button)
-    3. Restart the Jupyter server (press the green start button)
-    4. Execute code cells in the other notebook you want to run
-- Restarting the Jupyter server will wipe the memory of the server, meaining that all cells have to be executed again every time you work on a notebook.
+## Overview
+This project provides an **interactive visualization and forecasting system** for COVID-19, pneumonia, and influenza-related deaths across U.S. states. Try it out!
 
-## Instructions on how to run Application with Streamlit
+- Explore **weekly death trends** across multiple years
+- Compare **relative mortality rates** between states
+- Analyze **historical data** and extract insights
+- Forecast future deaths using **Auto ARIMA** time series modeling
 
-1. Make sure you have Streamlit installed if not: Install Streamlit with terminal 'pip install streamlit'
-2. Start Application: streamlit run app.py
-3. If this worked you will either be redirected to working page in a browser or enter URL displayed in terminal as 'Local URL' in any browser except Safari
-4. Have fun :)
+The system is built with **Streamlit**, **Plotly**, and **Pmdarima**, for an intuitive and interactive user interface.
+
+## Features
+### 1. **Comparing Weekly Death Trends Across Years**
+   - Displays **yearly mortality trends** by disease (COVID-19, Pneumonia, Influenza)
+   - Allows selection of a specific **state** and **cause of death**
+   - Uses **color-coded** trends for intuitive comparison
+
+### 2. **Following Weekly Death Trends by State**
+   - Provides a detailed **time-series visualization**
+   - Enables **interactive filtering** by state and disease
+   - Includes a **time-slider** for better focus on specific periods
+
+### 3. **Comparing Relative Death Counts Across States**
+   - Shows **percentage breakdowns** of disease-related deaths
+   - Supports filtering by **month, year, and up to 5 states**
+   - Uses **stacked bar charts** for clear visual comparisons
+
+### 4. **Forecasting Disease-Related Deaths**
+   - Uses **Auto ARIMA modeling** to predict future trends
+   - Provides **95% confidence intervals** for uncertainty estimation
+   - Adjustable forecasting window (1 to 52 weeks)
+
+## Dataset
+The dataset is sourced from the **Centers for Disease Control and Prevention (CDC)**:
+[Provisional COVID-19 Death Counts by Week Ending Date and State](https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Week-Ending-D/r8kw-7aab/about_data).
+
+It contains **17.5k records**, covering weekly mortality data for **COVID-19, Pneumonia, and Influenza** across U.S. states since **2020**.
+
+## Installation & Setup
+### **1. Create and Activate the Conda Environment**
+```bash
+conda env create -f environment.yml
+conda activate tu_mdg
+```
+
+### **2. Run the Streamlit App**
+```bash
+streamlit run app.py
+```
+- The app will launch in your default browser.
+- If not redirected automatically, use the **Local URL** displayed in the terminal.
+
+## Running Jupyter Notebooks in PyCharm
+1. Open a **Jupyter Notebook (`.ipynb`)** in PyCharm.
+2. Execute the **first cell** (to load all imports).
+3. **Avoid running multiple notebooks simultaneously** (PyCharm may crash the Jupyter server).
+4. Restart the Jupyter server if needed:
+   - **Stop** the server (Red Stop Button in PyCharm's Jupyter tab).
+   - **Restart** it (Green Start Button), then rerun your notebook.
+
+## Technologies Used
+- **Python**
+- **Streamlit** (Web App Framework)
+- **Pandas** (Data Processing)
+- **Plotly** (Interactive Graphs & Visualizations)
+- **Pmdarima** (Auto ARIMA Time Series Modeling)
+- **Statsmodels** (Statistical Analysis)
+- **Matplotlib** (Basic Data Visualization)
+
+## Insights & Findings
+- **COVID-19 and Pneumonia deaths peaked in Winter 2020-2022.**
+- **Seasonal trends** indicate a rise in mortality during winter months.
+- **Co-morbidity analysis** suggests a correlation between pneumonia and COVID-19 deaths.
+- **Forecasting models indicate potential spikes in pneumonia-related deaths** in early months of the year.
+
+## Authors
+- **Anton Zamyatin**
+- **Hannah Teis**
+
+## License
+This project is licensed under the MIT License. See `LICENSE` for details.
+
