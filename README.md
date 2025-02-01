@@ -10,27 +10,6 @@ This project provides an **interactive visualization and forecasting system** fo
 
 The system is built with **Streamlit**, **Plotly**, and **Pmdarima**, for an intuitive and interactive user interface.
 
-## Features
-### 1. **Comparing Weekly Death Trends Across Years**
-   - Displays **yearly mortality trends** by disease (COVID-19, Pneumonia, Influenza)
-   - Allows selection of a specific **state** and **cause of death**
-   - Uses **color-coded** trends for intuitive comparison
-
-### 2. **Following Weekly Death Trends by State**
-   - Provides a detailed **time-series visualization**
-   - Enables **interactive filtering** by state and disease
-   - Includes a **time-slider** for better focus on specific periods
-
-### 3. **Comparing Relative Death Counts Across States**
-   - Shows **percentage breakdowns** of disease-related deaths
-   - Supports filtering by **month, year, and up to 5 states**
-   - Uses **stacked bar charts** for clear visual comparisons
-
-### 4. **Forecasting Disease-Related Deaths**
-   - Uses **Auto ARIMA modeling** to predict future trends
-   - Provides **95% confidence intervals** for uncertainty estimation
-   - Adjustable forecasting window (1 to 52 weeks)
-
 ## Dataset
 The dataset is sourced from the **Centers for Disease Control and Prevention (CDC)**:
 [Provisional COVID-19 Death Counts by Week Ending Date and State](https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Week-Ending-D/r8kw-7aab/about_data).
@@ -58,6 +37,27 @@ streamlit run app.py
 4. Restart the Jupyter server if needed:
    - **Stop** the server (Red Stop Button in PyCharm's Jupyter tab).
    - **Restart** it (Green Start Button), then rerun your notebook.
+
+## Features
+### 1. **Comparing Weekly Death Trends Across Years**
+   - Displays **yearly mortality trends** by disease (COVID-19, Pneumonia, Influenza)
+   - Allows selection of a specific **state** and **cause of death**
+   - Uses **color-coded** trends for intuitive comparison
+
+### 2. **Following Weekly Death Trends by State**
+   - Provides a detailed **time-series visualization**
+   - Enables **interactive filtering** by state and disease
+   - Includes a **time-slider** for better focus on specific periods
+
+### 3. **Comparing Relative Death Counts Across States**
+   - Shows **percentage breakdowns** of disease-related deaths
+   - Supports filtering by **month, year, and up to 5 states**
+   - Uses **stacked bar charts** for clear visual comparisons
+
+### 4. **Forecasting Disease-Related Deaths**
+   - Uses **Auto ARIMA modeling** to predict future trends
+   - Provides **95% confidence intervals** for uncertainty estimation
+   - Adjustable forecasting window (1 to 52 weeks)
 
 ## Technologies Used
 - **Python**
